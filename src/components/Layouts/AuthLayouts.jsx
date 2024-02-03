@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 
-const AuthLayout = (props) => {
-  const { children, title, type } = props;
+const AuthLayout = ({ title, children, type }) => {
   return (
-    <div className="flex justify-center min-h-screen items-center">
+    <div className={`flex justify-center min-h-screen items-center`}>
       <div className="w-full max-w-xs">
-        <h1 className="text-blue-600 font-bold mb-2 text-3xl">{title}</h1>
+        <h1 className="text-[#294B29] font-bold mb-2 text-3xl">{title}</h1>
         <p className="font-medium text-slate-500 mb-8">
           Welcome, Please enter your details
         </p>
@@ -21,7 +20,7 @@ const Navigation = ({ type }) => {
     return (
       <p className="text-sm mt-5 text-center">
         Dont have an account? {""}
-        <Link to={"/register"} className="font-bold text-blue-500">
+        <Link to={"/register"} className="font-bold text-[#294B29]">
           Register
         </Link>
       </p>
@@ -30,7 +29,7 @@ const Navigation = ({ type }) => {
     return (
       <p className="text-sm mt-5 text-center">
         Already have an account? {""}
-        <Link to={"/login"} className="font-bold text-blue-500">
+        <Link to={"/login"} className="font-bold text-[#294B29]">
           Login
         </Link>
       </p>
